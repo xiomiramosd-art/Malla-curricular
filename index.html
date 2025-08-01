@@ -1,1 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malla Curricular Interactiva - Enfermería</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="malla-container">
+        <header>
+            <h1>Malla Interactiva de Enfermería 🩺</h1>
+            <p>Haz clic en un ramo para marcarlo como aprobado. Tu progreso se guardará automáticamente.</p>
+        </header>
+
+        <div class="semestres-grid">
+            <div class="semestre-columna">
+                <h3>Semestre 1</h3>
+                <div class="ramo" id="fundamentos-enfermeria">Fundamentos de enfermería</div>
+                <div class="ramo" id="quimica">Química general y orgánica</div>
+                <div class="ramo" id="anatomia">Anatomía humana</div>
+                <div class="ramo" id="biologia-celular">Biología celular y genética</div>
+                <div class="ramo" id="transversal-1">Curso transversal institucional 1</div>
+            </div>
+
+            <div class="semestre-columna">
+                <h3>Semestre 2</h3>
+                <div class="ramo" id="cuidados-basicos" data-requisitos="fundamentos-enfermeria">Cuidados básicos de enfermería</div>
+                <div class="ramo" id="bioquimica" data-requisitos="quimica">Bioquímica</div>
+                <div class="ramo" id="embriologia" data-requisitos="anatomia">Embriología e histología</div>
+                <div class="ramo" id="microbiologia" data-requisitos="biologia-celular">Microbiología y parasitología</div>
+                <div class="ramo" id="transversal-2">Curso transversal institucional 2</div>
+            </div>
+
+            <div class="semestre-columna">
+                <h3>Semestre 3</h3>
+                <div class="ramo" id="proceso-cuidados-1" data-requisitos="cuidados-basicos">Proceso y cuidados de enfermería 1</div>
+                <div class="ramo" id="farmacologia" data-requisitos="bioquimica">Farmacología</div>
+                <div class="ramo" id="fisiologia" data-requisitos="embriologia">Fisiología</div>
+                <div class="ramo" id="salud-publica">Salud pública</div>
+                <div class="ramo" id="bioestadistica">Bioestadística</div>
+                <div class="ramo" id="ingles-1">Inglés 1</div>
+            </div>
+
+            <div class="semestre-columna">
+                <h3>Semestre 4</h3>
+                <div class="ramo" id="proceso-cuidados-2" data-requisitos="proceso-cuidados-1">Proceso y cuidados de enfermería 2</div>
+                <div class="ramo" id="gestion-salud" data-requisitos="bioestadistica">Gestión y administración en salud</div>
+                <div class="ramo" id="farmacologia-aplicada" data-requisitos="farmacologia">Farmacología aplicada a la enfermería</div>
+                <div class="ramo" id="fisiopatologia" data-requisitos="fisiologia">Fisiopatología</div>
+                <div class="ramo" id="enfermeria-comunitaria-1" data-requisitos="salud-publica">Enfermería en salud familiar y comunitaria 1</div>
+                <div class="ramo" id="sello-institucional">Curso sello institucional</div>
+            </div>
+
+            <div class="semestre-columna">
+                <h3>Semestre 5</h3>
+                <div class="ramo" id="interdisciplinar-as" data-requisitos="salud-publica">Interdisciplinar A+S</div>
+                <div class="ramo" id="enfermeria-mujer" data-requisitos="proceso-cuidados-2">Enfermería en salud de la mujer</div>
+                <div class="ramo" id="gestion-servicios-1" data-requisitos="gestion-salud">Gestión y administración en servicios de enfermería 1</div>
+            </div>
+
+            <div class="semestre-columna">
+                <h3>Semestre 6</h3>
+                <div class="ramo" id="enfermeria-comunitaria-2" data-requisitos="enfermeria-comunitaria-1">Enfermería en salud familiar y comunitaria 2</div>
+                <div class="ramo" id="enfermeria-medico-quirurgico" data-requisitos="fisiopatologia">Enfermería en medico quirúrgico</div>
+                <div class="ramo" id="enfermeria-gerontologia" data-requisitos="enfermeria-comunitaria-1">Enfermería en gerontología y geriatría</div>
+            </div>
+
+            <div class="semestre-columna">
+                <h3>Semestre 7</h3>
+                <div class="ramo" id="enfermeria-salud-mental-1">Enfermería en salud mental 1</div>
+                <div class="ramo" id="investigacion-enfermeria-1" data-requisitos="bioestadistica">Investigación en enfermería 1</div>
+                <div class="ramo" id="electivo-1" data-requisitos="enfermeria-medico-quirurgico">Electivo disciplinar 1</div>
+            </div>
+
+            <div class="semestre-columna">
+                <h3>Semestre 7 y 8</h3>
+                <div class="ramo" id="enfermeria-pediatria" data-requisitos="enfermeria-mujer">Enfermería en pediatría</div>
+                <div class="ramo" id="enfermeria-comunitaria-3" data-requisitos="enfermeria-comunitaria-2">Enfermería en salud familiar y comunitaria 3</div>
+                <div class="ramo" id="enfermeria-urgencia" data-requisitos="enfermeria-medico-quirurgico">Enfermería en urgencia</div>
+            </div>
+
+            <div class="semestre-columna">
+                <h3>Semestre 8</h3>
+                <div class="ramo" id="enfermeria-salud-mental-2" data-requisitos="enfermeria-salud-mental-1">Enfermería en salud mental 2</div>
+                <div class="ramo" id="investigacion-enfermeria-2" data-requisitos="investigacion-enfermeria-1">Investigación en enfermería 2</div>
+                <div class="ramo" id="electivo-2" data-requisitos="enfermeria-medico-quirurgico">Electivo disciplinar 2</div>
+            </div>
+            
+            <div class="semestre-columna">
+                <h3>Semestre 9 y 10</h3>
+                <div class="ramo" id="internado-1" data-requisitos="hasta-octavo">Internado enfermería 1</div>
+                <div class="ramo" id="internado-2" data-requisitos="hasta-octavo">Internado enfermería 2</div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
 
